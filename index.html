@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oh Polly Prom Gift Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(to bottom,#F4ECFF,#E6D9FF);
+color:#3B235C;
+overflow-x:hidden;
+}
+
+/* Banner */
+.banner{
+background:#D8C4FF;
+padding:12px;
+text-align:center;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* Headline */
+.hero-title{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+color:#6B3FA0;
+}
+
+/* Offer Cards */
+.offer-wrapper{
+display:flex;
+justify-content:center;
+gap:1.5rem;
+flex-wrap:wrap;
+margin-bottom:1.5rem;
+}
+.offer-card{
+background:linear-gradient(145deg,#EDE2FF,#DCCBFF);
+border-radius:2rem;
+padding:1.5rem;
+text-align:center;
+box-shadow:0 10px 25px rgba(120,80,200,0.25);
+transition:0.3s;
+}
+.offer-card:hover{
+transform:translateY(-6px) scale(1.05);
+}
+.offer-btn{
+background:#6B3FA0;
+color:white;
+padding:0.7rem 1.8rem;
+border-radius:2rem;
+font-weight:bold;
+display:inline-block;
+margin-top:0.5rem;
+}
+
+/* Steps */
+.step-box{
+background:linear-gradient(135deg,#EFE7FF,#D9C8FF);
+border-radius:2rem;
+padding:1.8rem;
+text-align:center;
+box-shadow:0 10px 20px rgba(120,80,200,0.2);
+transition:0.3s;
+}
+.step-box:hover{
+transform:translateY(-5px);
+}
+
+/* Button */
+.main-btn{
+background:linear-gradient(90deg,#7A4DD8,#B28CFF);
+color:white;
+font-size:1.4rem;
+padding:1rem 3rem;
+border-radius:2rem;
+font-weight:bold;
+box-shadow:0 0 20px rgba(120,80,200,0.4);
+}
+
+/* Cards */
+.card{
+background:linear-gradient(135deg,#EFE7FF,#D9C8FF);
+border-radius:1.5rem;
+padding:2rem;
+box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Floating sparkles */
+.sparkle{
+position:absolute;
+border-radius:50%;
+background:radial-gradient(circle,#B28CFF,#7A4DD8);
+opacity:0.3;
+animation:floatSparkle linear infinite;
+}
+@keyframes floatSparkle{
+0%{transform:translateY(0) scale(0.5);}
+100%{transform:translateY(120vh) scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner">✨ Prom 2026 Exclusive Event ✨</div>
+
+<section class="py-16 px-4 text-center relative">
+<h1 class="hero-title mb-6">Want to get a gift card for Prom 2026?</h1>
+<p class="mb-6 text-lg">Oh Polly dresses. Glam looks. Your dream prom style.</p>
+
+<div class="offer-wrapper">
+<div class="offer-card">
+<p class="font-semibold">Complete 4–5 offers</p>
+<a href="#" class="offer-btn">Get $150</a>
+</div>
+<div class="offer-card">
+<p class="font-semibold">Complete 8+ offers</p>
+<a href="#" class="offer-btn">Get $450</a>
+</div>
+</div>
+
+<p class="mb-4 font-medium">All you need to do is complete these steps:</p>
+
+<!-- STEPS (must be exactly the same) -->
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+<div class="step-box"><p class="font-bold mb-1">Step 1</p><p>Complete surveys</p></div>
+<div class="step-box"><p class="font-bold mb-1">Step 2</p><p>Enter email & basic info</p></div>
+<div class="step-box"><p class="font-bold mb-1">Step 3</p><p>Complete recommended deals (install apps or games)</p></div>
+</div>
+
+<a href="#" class="main-btn inline-block">Start Now →</a>
+</section>
+
+<!-- Estimator -->
+<div class="card max-w-xl mx-auto text-center mt-10">
+<label class="block font-bold mb-2">Deals to complete (4–70):</label>
+<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded mb-3 text-black">
+<button onclick="calculateReward()" class="main-btn px-6 py-2">Calculate</button>
+<p id="rewardResult" class="mt-4 font-bold text-xl"></p>
+</div>
+
+<!-- FAQ -->
+<section class="py-12 px-4 text-center">
+<h2 class="text-3xl font-bold mb-6">FAQ</h2>
+<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+<div class="card faq-item cursor-pointer"><p class="font-bold">Is this really for prom?</p><p class="faq-content hidden">Yes! This event is themed around Prom 2026 fashion.</p></div>
+<div class="card faq-item cursor-pointer"><p class="font-bold">Is payment required?</p><p class="faq-content hidden">No payment is required to participate.</p></div>
+<div class="card faq-item cursor-pointer"><p class="font-bold">How long does it take?</p><p class="faq-content hidden">Most users finish within 20–30 minutes.</p></div>
+<div class="card faq-item cursor-pointer"><p class="font-bold">Where is the gift card sent?</p><p class="faq-content hidden">It is delivered directly to your email.</p></div>
+</div>
+</section>
+
+<footer class="py-10 text-center">
+<p>Secure • Encrypted • Verified</p>
+<p>© 2026 Prom Collection</p>
+</footer>
+
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-item').forEach(item=>{
+item.addEventListener('click',()=>{
+item.querySelector('.faq-content').classList.toggle('hidden');
+});
+});
+
+// Reward calculator
+function calculateReward(){
+const steps=parseInt(document.getElementById('stepsInput').value);
+if(steps<4){
+document.getElementById('rewardResult').textContent="You must complete 4+ deals to claim it";
+return;
+}
+const reward=Math.round((steps/4)*150);
+document.getElementById('rewardResult').textContent=`Estimated Reward: $${reward}`;
+}
+
+// Sparkles
+for(let i=0;i<25;i++){
+const s=document.createElement('div');
+s.className="sparkle";
+const size=Math.random()*25+15;
+s.style.width=size+"px";
+s.style.height=size+"px";
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+s.style.animationDuration=(40+Math.random()*20)+"s";
+document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
