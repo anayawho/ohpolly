@@ -32,22 +32,24 @@ font-size:2.6rem;
 color:#6B3FA0;
 }
 
-/* Apply Sections (same as Shein size) */
+/* Apply Sections (horizontal like ——) */
 .apply-section-wrapper {
 display:flex;
-justify-content:center;
 gap:1rem;
-flex-wrap:wrap;
-margin-bottom:1rem;
+overflow-x:auto;
+padding:1rem 0;
+scroll-snap-type:x mandatory;
+justify-content:flex-start;
 }
 .apply-section {
 background:linear-gradient(145deg,#EFE7FF,#D9C8FF);
 border-radius:2rem;
 padding:1rem 1.5rem;
 text-align:center;
-min-width:140px;
+min-width:160px;
 max-width:180px;
 box-shadow:0 10px 25px rgba(120,80,200,0.25);
+scroll-snap-align:center;
 transition:0.3s;
 }
 .apply-section:hover {
@@ -91,7 +93,7 @@ padding:1.5rem;
 box-shadow:0 10px 20px rgba(0,0,0,0.12);
 }
 
-/* Bubbles (from Shein) */
+/* Bubbles */
 #bubbles {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .bubble {
 position:absolute;
@@ -132,14 +134,14 @@ pointer-events:none;
 
 <p class="mb-4 font-medium">All you need to do is complete these steps:</p>
 
-<!-- Steps EXACT SAME -->
+<!-- Steps -->
 <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-6">
 <div class="step-box"><p class="font-bold mb-1">Step 1</p><p>Complete surveys</p></div>
 <div class="step-box"><p class="font-bold mb-1">Step 2</p><p>Enter email & basic info</p></div>
 <div class="step-box"><p class="font-bold mb-1">Step 3</p><p>Complete recommended deals (install apps or games)</p></div>
 </div>
 
-<!-- Calculator right after steps -->
+<!-- Calculator -->
 <div class="card max-w-xl mx-auto text-center mt-6">
 <label class="block font-bold mb-2">Deals to complete (4–70):</label>
 <input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded mb-3 text-black">
@@ -147,7 +149,7 @@ pointer-events:none;
 <p id="rewardResult" class="mt-4 font-bold text-xl"></p>
 </div>
 
-<!-- FAQ right after calculator -->
+<!-- FAQ -->
 <section class="py-12 px-4 text-center">
 <h2 class="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
@@ -240,9 +242,8 @@ commentsDiv.appendChild(div);
 setInterval(updateComments,2000);
 updateComments();
 
-// Bubbles spawn (from Shein)
+// Bubbles
 const bubblesContainer = document.getElementById('bubbles');
-
 function createBubble(topPosition = -50) {
 const bubble = document.createElement('div');
 bubble.className = 'bubble';
@@ -255,7 +256,6 @@ bubble.style.animationDuration = (50 + Math.random() * 30) + 's';
 bubblesContainer.appendChild(bubble);
 bubble.addEventListener('animationend', () => bubble.remove());
 }
-
 for(let i = 0; i < 30; i++){
 const randomTop = Math.random() * window.innerHeight;
 createBubble(randomTop);
