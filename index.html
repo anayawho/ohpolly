@@ -13,9 +13,9 @@
 body{
 margin:0;
 font-family:'Roboto',sans-serif;
-background:linear-gradient(to bottom,#0a0a0a,#000000);
+background:linear-gradient(to bottom,#ffffff,#f4fff6);
 overflow-x:hidden;
-color:white;
+color:#1b1b1b;
 position:relative;
 }
 
@@ -23,8 +23,8 @@ position:relative;
 .urgency-pulse{
 animation:pulseUrgency 1.5s infinite;
 font-size:1.2rem;
-background:#ffffff;
-color:#000000;
+background:#dff7e6;
+color:#145a32;
 padding:0.5rem 0;
 text-align:center;
 font-weight:bold;
@@ -40,7 +40,7 @@ letter-spacing:1px;
 .hero-headline{
 font-family:'Roboto',sans-serif;
 font-weight:800;
-color:#ffffff;
+color:#145a32;
 margin-top:-0.5rem;
 letter-spacing:2px;
 text-transform:uppercase;
@@ -48,21 +48,21 @@ text-transform:uppercase;
 
 /* Steps */
 .step-box{
-background:#111111;
-color:white;
+background:#ffffff;
+color:#1b1b1b;
 border-radius:2rem;
 padding:1.8rem 1.5rem;
-box-shadow:0 12px 25px rgba(0,0,0,0.25);
+box-shadow:0 12px 25px rgba(0,0,0,0.08);
 text-align:center;
 transition:transform 0.3s ease,box-shadow 0.3s ease;
 position:relative;
 overflow:hidden;
-border:1px solid rgba(255,255,255,0.08);
+border:1px solid #d9f5e3;
 }
 
 .step-box:hover{
 transform:translateY(-7px) scale(1.03);
-box-shadow:0 18px 30px rgba(0,0,0,0.35);
+box-shadow:0 18px 30px rgba(0,0,0,0.12);
 }
 
 .step-box::after{
@@ -72,7 +72,7 @@ top:-15px;
 right:-15px;
 width:35px;
 height:35px;
-background:rgba(255,255,255,0.08);
+background:#dff7e6;
 border-radius:50%;
 }
 
@@ -85,37 +85,39 @@ display:inline-block;
 padding:0.7rem 1.8rem;
 border-radius:3rem;
 background:#ffffff;
-color:#000000;
-box-shadow:0 4px 18px rgba(255,255,255,0.15);
+color:#145a32;
+box-shadow:0 4px 18px rgba(0,0,0,0.08);
 letter-spacing:1px;
+border:1px solid #d9f5e3;
 }
 
 /* Button */
 .click-button{
-background:#ffffff;
-color:#000000;
+background:#dff7e6;
+color:#145a32;
 font-weight:bold;
-box-shadow:0 4px 20px rgba(0,0,0,0.3);
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
 font-size:1.6rem;
 padding:1rem 3.5rem;
 border-radius:2rem;
 transition:transform 0.3s,box-shadow 0.3s;
+border:1px solid #bfeccc;
 }
 
 .click-button:hover{
 transform:scale(1.07);
-box-shadow:0 6px 25px rgba(255,255,255,0.2);
+box-shadow:0 6px 25px rgba(0,0,0,0.12);
 }
 
 /* Cards */
 .card{
 border-radius:1.5rem;
 padding:2rem;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
 transition:transform 0.3s;
-background:#111111;
-color:#ffffff;
-border:1px solid rgba(255,255,255,0.08);
+background:#ffffff;
+color:#1b1b1b;
+border:1px solid #d9f5e3;
 }
 
 .card:hover{transform:translateY(-5px);}
@@ -134,7 +136,7 @@ z-index:0;
 .bubble{
 position:absolute;
 border-radius:50%;
-background:rgba(255,255,255,0.06);
+background:rgba(144,238,174,0.25);
 opacity:0.4;
 animation:floatBubble linear infinite;
 }
@@ -214,7 +216,7 @@ Calculate Reward
 <!-- FAQ -->
 <section class="py-10 px-4 text-center">
 
-<h2 class="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+<h2 class="text-4xl font-bold mb-6" style="color:#145a32;">Frequently Asked Questions</h2>
 
 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
 
@@ -245,7 +247,7 @@ Calculate Reward
 <!-- TESTIMONIALS -->
 <section class="py-20 px-4 text-center">
 
-<h2 class="text-4xl font-bold mb-12">Testimonials</h2>
+<h2 class="text-4xl font-bold mb-12" style="color:#145a32;">Testimonials</h2>
 
 <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
@@ -260,7 +262,7 @@ Calculate Reward
 <!-- STATS -->
 <section class="py-20 px-4 text-center">
 
-<h2 class="text-4xl font-bold mb-12">Stats & Milestones</h2>
+<h2 class="text-4xl font-bold mb-12" style="color:#145a32;">Stats & Milestones</h2>
 
 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
@@ -275,7 +277,7 @@ Calculate Reward
 <!-- LEADERBOARD -->
 <section class="py-20 px-4 text-center">
 
-<h2 class="text-4xl font-bold mb-12">Recent Winners</h2>
+<h2 class="text-4xl font-bold mb-12" style="color:#145a32;">Recent Winners</h2>
 
 <div id="leaderboard" class="max-w-4xl mx-auto"></div>
 
