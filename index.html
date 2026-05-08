@@ -19,7 +19,6 @@ color:#1b1b1b;
 position:relative;
 }
 
-/* Banner */
 .urgency-pulse{
 animation:pulseUrgency 1.5s infinite;
 font-size:1.2rem;
@@ -36,17 +35,14 @@ letter-spacing:1px;
 50%{opacity:0.75;}
 }
 
-/* Hero */
 .hero-headline{
 font-family:'Roboto',sans-serif;
 font-weight:800;
 color:#145a32;
-margin-top:-0.5rem;
 letter-spacing:2px;
 text-transform:uppercase;
 }
 
-/* Steps */
 .step-box{
 background:#ffffff;
 color:#1b1b1b;
@@ -54,73 +50,41 @@ border-radius:2rem;
 padding:1.8rem 1.5rem;
 box-shadow:0 12px 25px rgba(0,0,0,0.08);
 text-align:center;
-transition:transform 0.3s ease,box-shadow 0.3s ease;
-position:relative;
-overflow:hidden;
 border:1px solid #d9f5e3;
 }
 
-.step-box:hover{
-transform:translateY(-7px) scale(1.03);
-box-shadow:0 18px 30px rgba(0,0,0,0.12);
-}
-
-.step-box::after{
-content:"";
-position:absolute;
-top:-15px;
-right:-15px;
-width:35px;
-height:35px;
-background:#dff7e6;
-border-radius:50%;
-}
-
-/* Instruction */
-.instructions-text{
-font-size:1.25rem;
-font-weight:800;
-margin-bottom:1.5rem;
-display:inline-block;
-padding:0.7rem 1.8rem;
-border-radius:3rem;
-background:#ffffff;
-color:#145a32;
-box-shadow:0 4px 18px rgba(0,0,0,0.08);
-letter-spacing:1px;
-border:1px solid #d9f5e3;
-}
-
-/* Button */
 .click-button{
 background:#dff7e6;
 color:#145a32;
 font-weight:bold;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
-font-size:1.6rem;
 padding:1rem 3.5rem;
 border-radius:2rem;
-transition:transform 0.3s,box-shadow 0.3s;
 border:1px solid #bfeccc;
 }
 
-.click-button:hover{
-transform:scale(1.07);
-box-shadow:0 6px 25px rgba(0,0,0,0.12);
-}
-
-/* Cards */
 .card{
 border-radius:1.5rem;
 padding:2rem;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
-transition:transform 0.3s;
 background:#ffffff;
-color:#1b1b1b;
 border:1px solid #d9f5e3;
 }
 
-.card:hover{transform:translateY(-5px);}
+.calc-input{
+background:#e9f9ef;
+border:2px solid #bfeccc;
+color:#145a32;
+font-weight:600;
+}
+
+.soft-note{
+color:#145a32;
+font-size:0.95rem;
+opacity:0.75;
+font-weight:600;
+margin-bottom:12px;
+}
+
+.faq-content{margin-top:10px;}
 
 </style>
 </head>
@@ -141,33 +105,14 @@ You must complete these steps to claim it:
 
 <div class="grid md:grid-cols-4 gap-6 mb-6 max-w-6xl mx-auto">
 
-<div class="step-box">
-<p class="font-bold mb-1">Step 1</p>
-<p>Click on “Claim Now”</p>
-</div>
-
-<div class="step-box">
-<p class="font-bold mb-1">Step 2</p>
-<p>Enter your email and basic info</p>
-</div>
-
-<div class="step-box">
-<p class="font-bold mb-1">Step 3</p>
-<p>Complete 4-5 sponsored deals</p>
-</div>
-
-<div class="step-box">
-<p class="font-bold mb-1">Step 4</p>
-<p>Enjoy your Alo Yoga gift card</p>
-</div>
+<div class="step-box"><p class="font-bold">Step 1</p><p>Click Claim Now</p></div>
+<div class="step-box"><p class="font-bold">Step 2</p><p>Enter email info</p></div>
+<div class="step-box"><p class="font-bold">Step 3</p><p>Complete 4-5 deals</p></div>
+<div class="step-box"><p class="font-bold">Step 4</p><p>Get reward</p></div>
 
 </div>
 
-<div class="mt-6">
-<a href="https://giftclick.org/aff_c?offer_id=3674&aff_id=64120" class="inline-block click-button">
-Claim Now
-</a>
-</div>
+<a href="#" class="click-button inline-block">Claim Now</a>
 
 </section>
 
@@ -176,12 +121,10 @@ Claim Now
 
 <label class="block font-bold mb-2 text-lg">Deals to complete (4-70):</label>
 
-<!-- visible requirement -->
-<p class="mb-3 font-semibold" style="color:#145a32;">
-You must complete 4+ deals
-</p>
+<p class="soft-note">You must complete 4+ deals to claim it</p>
 
-<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-lg mb-4 text-black">
+<input type="number" id="stepsInput" min="4" max="70"
+class="w-full p-3 rounded-lg mb-4 calc-input">
 
 <button onclick="calculateReward()" class="click-button px-6 py-3 rounded-2xl">
 Calculate Reward
@@ -199,23 +142,23 @@ Calculate Reward
 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
 
 <div class="card faq-item cursor-pointer">
-<p class="font-bold mb-2">Is my information secure?</p>
-<p class="faq-content hidden">All information is encrypted and stored securely.</p>
+<p class="font-bold">Is my information secure?</p>
+<p class="faq-content hidden">Yes, all data is encrypted and safe.</p>
 </div>
 
 <div class="card faq-item cursor-pointer">
-<p class="font-bold mb-2">How do I claim my reward?</p>
-<p class="faq-content hidden">Complete all required steps and offers.</p>
+<p class="font-bold">How do I claim?</p>
+<p class="faq-content hidden">Complete all required steps.</p>
 </div>
 
 <div class="card faq-item cursor-pointer">
-<p class="font-bold mb-2">Do I need payment?</p>
+<p class="font-bold">Do I pay?</p>
 <p class="faq-content hidden">No payment required.</p>
 </div>
 
 <div class="card faq-item cursor-pointer">
-<p class="font-bold mb-2">When do I receive it?</p>
-<p class="faq-content hidden">After completion of all steps.</p>
+<p class="font-bold">When do I receive it?</p>
+<p class="faq-content hidden">After completing all steps.</p>
 </div>
 
 </div>
