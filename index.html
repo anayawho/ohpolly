@@ -122,37 +122,10 @@ border:1px solid #d9f5e3;
 
 .card:hover{transform:translateY(-5px);}
 
-/* Bubbles */
-#bubbles{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-z-index:0;
-}
-
-.bubble{
-position:absolute;
-border-radius:50%;
-background:rgba(144,238,174,0.25);
-opacity:0.4;
-animation:floatBubble linear infinite;
-}
-
-@keyframes floatBubble{
-0%{transform:translateY(0px) scale(0.5);opacity:0.2;}
-50%{opacity:0.3;}
-100%{transform:translateY(110vh) scale(1);opacity:0.1;}
-}
-
 </style>
 </head>
 
 <body>
-
-<div id="bubbles"></div>
 
 <div class="urgency-pulse">Limited Time Alo Yoga Reward Event</div>
 
@@ -202,6 +175,11 @@ Claim Now
 <div class="mt-10 card max-w-2xl mx-auto p-8 text-center">
 
 <label class="block font-bold mb-2 text-lg">Deals to complete (4-70):</label>
+
+<!-- visible requirement -->
+<p class="mb-3 font-semibold" style="color:#145a32;">
+You must complete 4+ deals
+</p>
 
 <input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-lg mb-4 text-black">
 
@@ -284,7 +262,7 @@ Calculate Reward
 </section>
 
 <footer class="py-12 text-center">
-<p>© 2025 Alo Yoga Rewards</p>
+<p>© 2026 Yoga Rewards</p>
 </footer>
 
 <script>
